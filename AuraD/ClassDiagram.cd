@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Core">
+    <Position X="0.544" Y="8.03" Height="0.291" Width="1.479" />
+  </Comment>
+  <Comment CommentText="Input readers">
+    <Position X="11.68" Y="0.5" Height="0.494" Width="0.991" />
+  </Comment>
+  <Comment CommentText="App modes">
+    <Position X="9.245" Y="4.25" Height="0.291" Width="0.835" />
+  </Comment>
+  <Comment CommentText="ColorModelSchema">
+    <Position X="4.051" Y="9.331" Height="0.291" Width="1.399" />
+  </Comment>
+  <Comment CommentText="Data provider">
+    <Position X="0.5" Y="12.581" Height="0.321" Width="0.958" />
+  </Comment>
+  <Class Name="Application">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Src\Application.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DynamicBacklight">
+    <Position X="9.25" Y="6" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="DynamicBacklight::BatchCachedPair" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DynamicBacklight.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="DynamicBacklight::Unit" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DynamicBacklight.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAEgBAAAAIAAAAAAAAAAgAAAABQAI=</HashCode>
+      <FileName>Src\DynamicBacklight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PdhDialog">
+    <Position X="11" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Src\PdhDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RangeReader">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="RangeReader::Range" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\RangeReader.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAEAEAEAQgAAAgEAAAAAAQAQAAAAAAAEA=</HashCode>
+      <FileName>Src\RangeReader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Subprogram">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Src\Subprogram.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSchemaReader">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="ColorSchemaReader::__unnamed_struct_0013_1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\ColorSchemaReader.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BKAAAAACEAMAACEEFIAgAABFAAABFAAQABAAAEAJQEA=</HashCode>
+      <FileName>Src\ColorSchemaReader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSourceReader">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAACAEAAAAEANBAgAAAAAAAABEAABAACAQAAAEA=</HashCode>
+      <FileName>Src\DataSourceReader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceCaptureReader">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="DeviceCaptureReader::__unnamed_struct_002f_1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DeviceCaptureReader.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAmQAABCKEAFAggAAIgAAJAAAUHAhQIBYAAAEA=</HashCode>
+      <FileName>Src\DeviceCaptureReader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::API">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="AuraSDK::API::DeviceMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\AuraSDK\API.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EABEAAiAUFAABRAAAAAAAQBgAEQAAQACAAQEEAAAAQA=</HashCode>
+      <FileName>Src\AuraSDK\API.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::Color">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="AuraSDK::Color::ComponentIdx" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\AuraSDK\Color.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAAAAAAAAACAAAABAgBAABAA=</HashCode>
+      <FileName>Src\AuraSDK\Color.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::DeviceEnumerator">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAiAAAAAAAAA=</HashCode>
+      <FileName>Src\AuraSDK\DeviceEnumerator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::Device">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAIAAgAAAAIBAAAAEAAAAAAAACgABAAAAAA=</HashCode>
+      <FileName>Src\AuraSDK\Device.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::LED">
+    <Position X="19.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAgAAAAAACAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Src\AuraSDK\LED.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::GpuDevice">
+    <Position X="22.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAIAAgAAAEAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\AuraSDK\GpuDevice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuraSDK::MbDevice">
+    <Position X="20.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAIAQgAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\AuraSDK\MbDevice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSchema::Factory">
+    <Position X="4" Y="9.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="ColorSchema::Factory::Schema" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\ColorSchema\Factory.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="ColorSchema::Factory::Model" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\ColorSchema\Factory.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAgAIBAAAAAAAAAAAAAIAAAAAAAAIAA=</HashCode>
+      <FileName>Src\ColorSchema\Factory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSchema::LinearGradient">
+    <Position X="18" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\ColorSchema\LinearGradient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSchema::Gradient">
+    <Position X="18" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAABAASBAAAAAAAQAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\ColorSchema\Gradient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSchema::Rgb">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAoAAAAIAAAAAAAAAAAAAAAAAAFAAAgA=</HashCode>
+      <FileName>Src\ColorSchema\Rgb.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSchema::RgbAdapter">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\ColorSchema\RgbAdapter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core::AutoIncrement">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Src\Core\AutoIncrement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core::Exception">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAABAAARAAAAAAAA=</HashCode>
+      <FileName>Src\Core\Exception.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSource::NonQuotedString">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAgAAAAAQAgAAAAIACAAAAAAAAAA=</HashCode>
+      <FileName>Src\DataSource\NonQuotedString.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataSource::QuoutedString">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAgAAAAAQAgAAAAIACAAAAAAAAAA=</HashCode>
+      <FileName>Src\DataSource\QuotedString.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceCapture::AuraBinder">
+    <Position X="10.5" Y="10.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="DeviceCapture::AuraBinder::DeviceAccessor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DeviceCapture\AuraBinder.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="DeviceCapture::AuraBinder::LedAccessor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DeviceCapture\AuraBinder.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAiIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\DeviceCapture\AuraBinder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Provider::ProviderFactory">
+    <Position X="0.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\Provider\ProviderFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Syntax::Any">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\Syntax\Any.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Syntax::Identifier">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAgAAAAAQAgAAAAIAAAAgAAAAAAA=</HashCode>
+      <FileName>Src\Syntax\Identifier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Syntax::Keyword">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAASIAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\Syntax\Keyword.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Syntax::Number">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAACIAAAAgAAAAAAA=</HashCode>
+      <FileName>Src\Syntax\Number.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Syntax::Trigger">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAABAAAgAAAAAAAgAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Src\Syntax\Trigger.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CommandLineReader">
+    <Position X="2.5" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\CommandLineReader.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ColorSchema::AuraModelAdapter">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\ColorSchema\AuraModelAdapter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ColorSchema::ColorModel">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAACAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Src\ColorSchema\ColorModel.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DeviceCapture::CaptureUnit">
+    <Position X="8.5" Y="12.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DeviceCapture::CaptureUnit::DeviceType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DeviceCapture\CaptureUnit.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="DeviceCapture::CaptureUnit::Capture" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\DeviceCapture\CaptureUnit.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAgAAAAAAABEAAAAAACAAAAAAA=</HashCode>
+      <FileName>Src\DeviceCapture\CaptureUnit.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Provider::BatchQuery">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAQAAAAAAAAAQAAAAAAEAAAAAA=</HashCode>
+      <FileName>Src\Provider\BatchQuery.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Provider::SourceInfo">
+    <Position X="0.5" Y="14.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Provider::SourceInfo::Schema" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Provider\SourceInfo.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\Provider\SourceInfo.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Syntax::Cursor">
+    <Position X="8.5" Y="10" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAQAAAgIAAAAIAAIAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Src\Syntax\Cursor.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Syntax::Token" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Src\Syntax\Token.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Syntax::TokenNode">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAABAAAAAAIAAAAAAAAAAAAQAAAIAAAA=</HashCode>
+      <FileName>Src\Syntax\TokenNode.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

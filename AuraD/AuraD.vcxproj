@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E9268D56-9A13-45A8-97B8-2956E4DF2178}</ProjectGuid>
+    <RootNamespace>AuraD</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>AuraD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Repo\AuraSDK\sdk;D:\Projects\AuraD\AuraD\Src;$(IncludePath)</IncludePath>
+    <ReferencePath>D:\Repo\AuraSDK\sdk;$(ReferencePath)</ReferencePath>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <EnableCppCoreCheck>false</EnableCppCoreCheck>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\Repo\AuraSDK\sdk;D:\Projects\AuraD\AuraD\Src;$(IncludePath)</IncludePath>
+    <ReferencePath>D:\Repo\AuraSDK\sdk;$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Repo\AuraSDK\sdk;D:\Projects\AuraD\AuraD\Src;$(IncludePath)</IncludePath>
+    <ReferencePath>D:\Repo\AuraSDK\sdk;$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>pdh.lib %(AdditionalOptions)</AdditionalOptions>
+      <StackReserveSize>
+      </StackReserveSize>
+      <SubSystem>
+      </SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>pdh.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>pdh.lib %(AdditionalOptions)</AdditionalOptions>
+      <StackReserveSize>1024</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Application.cpp" />
+    <ClCompile Include="Src\AuraSDK\API.cpp" />
+    <ClCompile Include="Src\AuraSDK\Color.cpp" />
+    <ClCompile Include="Src\AuraSDK\DeviceEnumerator.cpp" />
+    <ClCompile Include="Src\AuraSDK\Device.cpp" />
+    <ClCompile Include="Src\AuraSDK\GpuDevice.cpp" />
+    <ClCompile Include="Src\ColorSchemaReader.cpp" />
+    <ClCompile Include="Src\ColorSchema\Factory.cpp" />
+    <ClCompile Include="Src\ColorSchema\Gradient.cpp" />
+    <ClCompile Include="Src\AuraSDK\LED.cpp" />
+    <ClCompile Include="Src\ColorSchema\LinearGradient.cpp" />
+    <ClCompile Include="Src\AuraSDK\MbDevice.cpp" />
+    <ClCompile Include="Src\CommandLinereader.cpp" />
+    <ClCompile Include="Src\Core\AutoIncrement.cpp" />
+    <ClCompile Include="Src\Core\GetLastErrorAsString.cpp" />
+    <ClCompile Include="Src\ColorSchema\Rgb.cpp" />
+    <ClCompile Include="Src\ColorSchema\RgbAdapter.cpp" />
+    <ClCompile Include="Src\DataSourceReader.cpp" />
+    <ClCompile Include="Src\DataSource\NonQuotedString.cpp" />
+    <ClCompile Include="Src\DataSource\QuotedString.cpp" />
+    <ClCompile Include="Src\DeviceCaptureReader.cpp" />
+    <ClCompile Include="Src\DeviceCapture\AuraBinder.cpp" />
+    <ClCompile Include="Src\Core\Exception.cpp" />
+    <ClCompile Include="Src\DynamicBacklight.cpp" />
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Src\ParsingError.cpp" />
+    <ClCompile Include="Src\PdhDialog.cpp" />
+    <ClCompile Include="Src\Provider\PDH\PdhAdapter.cpp" />
+    <ClCompile Include="Src\Provider\PDH\PdhQuery.cpp" />
+    <ClCompile Include="Src\Provider\ProviderFactory.cpp" />
+    <ClCompile Include="Src\RangeReader.cpp" />
+    <ClCompile Include="Src\Syntax\Any.cpp" />
+    <ClCompile Include="Src\Syntax\Cursor.cpp" />
+    <ClCompile Include="Src\Syntax\Identifier.cpp" />
+    <ClCompile Include="Src\Syntax\Keyword.cpp" />
+    <ClCompile Include="Src\Syntax\Number.cpp" />
+    <ClCompile Include="Src\Syntax\TokenNode.cpp" />
+    <ClCompile Include="Src\Syntax\Trigger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Application.h" />
+    <ClInclude Include="Src\DynamicBacklight.h" />
+    <ClInclude Include="Src\ParsingError.h" />
+    <ClInclude Include="Src\PdhDialog.h" />
+    <ClInclude Include="Src\RangeReader.h" />
+    <ClInclude Include="Src\Subprogram.h" />
+    <ClInclude Include="Src\AuraSDK\API.h" />
+    <ClInclude Include="Src\AuraSDK\Color.h" />
+    <ClInclude Include="Src\AuraSDK\DeviceEnumerator.h" />
+    <ClInclude Include="Src\AuraSDK\Device.h" />
+    <ClInclude Include="Src\AuraSDK\GpuDevice.h" />
+    <ClInclude Include="Src\AuraSDK\LED.h" />
+    <ClInclude Include="Src\ColorSchemaReader.h" />
+    <ClInclude Include="Src\ColorSchema\AuraModelAdapter.h" />
+    <ClInclude Include="Src\ColorSchema\ColorModel.h" />
+    <ClInclude Include="Src\ColorSchema\Factory.h" />
+    <ClInclude Include="Src\ColorSchema\LinearGradient.h" />
+    <ClInclude Include="Src\AuraSDK\MbDevice.h" />
+    <ClInclude Include="Src\AuraSDK\Type.h" />
+    <ClInclude Include="Src\CommandLineReader.h" />
+    <ClInclude Include="Src\Core\AutoIncrement.h" />
+    <ClInclude Include="Src\Core\GetLastErrorAsString.h" />
+    <ClInclude Include="Src\ColorSchema\Gradient.h" />
+    <ClInclude Include="Src\ColorSchema\Rgb.h" />
+    <ClInclude Include="Src\ColorSchema\RgbAdapter.h" />
+    <ClInclude Include="Src\DataSourceReader.h" />
+    <ClInclude Include="Src\DataSource\NonQuotedString.h" />
+    <ClInclude Include="Src\DataSource\QuotedString.h" />
+    <ClInclude Include="Src\DeviceCaptureReader.h" />
+    <ClInclude Include="Src\DeviceCapture\AuraBinder.h" />
+    <ClInclude Include="Src\DeviceCapture\CaptureUnit.h" />
+    <ClInclude Include="Src\Core\Exception.h" />
+    <ClInclude Include="Src\Provider\BatchQuery.h" />
+    <ClInclude Include="Src\Provider\PDH\PdhAdapter.h" />
+    <ClInclude Include="Src\Provider\PDH\PdhQuery.h" />
+    <ClInclude Include="Src\Provider\ProviderFactory.h" />
+    <ClInclude Include="Src\Provider\SourceInfo.h" />
+    <ClInclude Include="Src\Syntax\Any.h" />
+    <ClInclude Include="Src\Syntax\Cursor.h" />
+    <ClInclude Include="Src\Syntax\Identifier.h" />
+    <ClInclude Include="Src\Syntax\Keyword.h" />
+    <ClInclude Include="Src\Syntax\Number.h" />
+    <ClInclude Include="Src\Syntax\Token.h" />
+    <ClInclude Include="Src\Syntax\TokenNode.h" />
+    <ClInclude Include="Src\Syntax\Trigger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
