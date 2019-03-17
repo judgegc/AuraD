@@ -5,16 +5,16 @@ Enumerator MbDevice::Enumerate = &API::EnumerateMb;
 MbDevice::MbDevice(const API & api, GPULightControl hDevice) : Device(api, hDevice) {}
 void MbDevice::SetMode(API::DeviceMode mode)
 {
-	api.SetGPUMode(hDevice, mode);
+	api.SetMbMode(hDevice, mode);
 }
 
 DWORD MbDevice::LedCount()
 {
-	return api.GetGPULedCount(hDevice);
+	return api.GetMbLedCount(hDevice);
 }
 
 void MbDevice::ApplyColorArray()
 {
-	api.SetGPUColor(hDevice, colorArray);
+	api.SetMbColor(hDevice, colorArray);
 }
 }
