@@ -142,6 +142,7 @@
     <ClCompile Include="Src\Core\GetLastErrorAsString.cpp" />
     <ClCompile Include="Src\ColorSchema\Rgb.cpp" />
     <ClCompile Include="Src\ColorSchema\RgbAdapter.cpp" />
+    <ClCompile Include="Src\Core\Util.cpp" />
     <ClCompile Include="Src\DataSourceReader.cpp" />
     <ClCompile Include="Src\DataSource\NonQuotedString.cpp" />
     <ClCompile Include="Src\DataSource\QuotedString.cpp" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.h" />
+    <ClInclude Include="Src\Core\Util.h" />
     <ClInclude Include="Src\DynamicBacklight.h" />
     <ClInclude Include="Src\ParsingError.h" />
     <ClInclude Include="Src\PdhDialog.h" />
