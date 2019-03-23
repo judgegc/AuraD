@@ -28,7 +28,7 @@ std::vector<std::unique_ptr<AuraSDK::LED>> AuraBinder::Bind(const CaptureUnit & 
 	}
 	case CaptureUnit::DeviceType::KEYBARD:
 	case CaptureUnit::DeviceType::MOUSE:
-		throw std::runtime_error("Keyboard and mouse interface not implemented yet.");
+		throw std::runtime_error("Keyboard and mouse interface not implemented yet");
 	}
 
 	std::vector<std::unique_ptr<AuraSDK::LED>> ret;

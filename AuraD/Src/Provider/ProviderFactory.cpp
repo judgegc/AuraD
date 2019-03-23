@@ -10,7 +10,7 @@ std::unique_ptr<BatchQuery> ProviderFactory::CreateBatchQuery(SourceInfo::Schema
 	case SourceInfo::Schema::PDH:
 		return std::make_unique<PDH::PdhAdapter>();
 	default:
-		throw Core::Exception(L"Unknown batch query type.");
+		throw Core::Exception(L"Unknown batch query type");
 	}
 }
 }

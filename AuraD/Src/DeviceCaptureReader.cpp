@@ -21,7 +21,7 @@ void DeviceCaptureReader::NewUnit()
 	std::array<std::wstring, 5> types{ L"never gonna give you up", L"gpu", L"mbr", L"kbr", L"mouse" };
 	auto found = std::find(types.begin(), types.end(), device.Get<Syntax::Identifier>()->Value());
 	if (found == types.end())
-		throw Core::Exception(L"Unknown device type.");
+		throw Core::Exception(L"Unknown device type");
 	result.unit.push_back({ static_cast<DeviceCapture::CaptureUnit::DeviceType>(found - types.begin()) });
 }
 

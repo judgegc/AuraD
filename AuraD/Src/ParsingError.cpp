@@ -10,7 +10,7 @@ std::wstring ParsingError::Format(const std::wstring& title, const std::wstring&
 {
 	std::wstringstream msg;
 	msg << title << L'\n';
-	msg << sample << L" at position " << problemIdx << L".\n";
+	msg << sample << L" at position " << problemIdx << L"\n";
 	msg << std::setw(problemIdx + 1) << '^' << std::endl;
 	return msg.str();
 }
