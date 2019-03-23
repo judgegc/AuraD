@@ -20,6 +20,9 @@ std::wstring GetLastErrorAsString(const std::wstring& source)
 	//Free the buffer.
 	LocalFree(messageBuffer);
 
+	if (std::wstring_view(message.data() + message.length() - 2) == L"\r\n")
+		message = message.substr(0, message.length() - 2);
+
 	return message;
 }
 }
