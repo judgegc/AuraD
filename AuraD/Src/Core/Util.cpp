@@ -54,5 +54,27 @@ std::string Utf16ToUtf8(const std::wstring& str)
 	}
 	return ret;
 }
-
+/*
+https://stackoverflow.com/questions/38034033/c-localtime-this-function-or-variable-may-be-unsafe
+*/
+std::tm localtime_xp(std::time_t timer)
+{
+	std::tm bt{};
+#if defined(__unix__)
+	localtime_r(&timer, &bt);
+#elif defined(_MSC_VER)
+	localtime_s(&bt, &timer);
+#else
+	static std::mutex mtx;
+	std::lock_guard<std::mutex> lock(mtx);
+	bt = *std::localtime(&timer);
+#endif
+	return bt;
+}
+std::wstring Timestamp(const std::wstring& fmt)
+{
+	auto bt = localtime_xp(std::time(0));
+	wchar_t buf[64];
+	return { buf, std::wcsftime(buf, sizeof(buf), fmt.c_str(), &bt) };
+}
 }
