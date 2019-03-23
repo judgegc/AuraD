@@ -2,6 +2,9 @@
 #include "CommandLineReader.h"
 #include "Application.h"
 
+#include "Services/LoggerService.h"
+#include "Log/FileLogger.h"
+
 #include <io.h>
 #include <atomic>
 #include <fcntl.h>
@@ -9,6 +12,7 @@
 #include <Windows.h>
 
 using namespace Core;
+using namespace Services;
 
 std::atomic<bool> IsWorking = true;
 BOOL WINAPI OnSignal(DWORD signal)
@@ -30,6 +34,9 @@ int wmain(int argc, wchar_t *argv[])
 
 	try
 	{
+		LoggerService::Initialize<Log::FileLogger>(L"activity.log");
+		LoggerService::Instance()->Log(L"Logger initialized");
+
 		CommandLineReader cmd;
 		Application app(cmd(argc, argv));
 		app.Run();
@@ -37,10 +44,14 @@ int wmain(int argc, wchar_t *argv[])
 	catch (const Exception& e)
 	{
 		std::wcerr << e.What() << std::endl;
+		LoggerService::Instance()->Log(e.What());
 	}
 	catch (const std::exception& e)
 	{
 		std::wcerr << e.what() << std::endl;
 	}
+
+	LoggerService::Instance()->Log(L"Exited");
+
 	return 0;
 }
