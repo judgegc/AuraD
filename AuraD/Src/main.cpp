@@ -31,7 +31,7 @@ int wmain(int argc, wchar_t *argv[])
 	_setmode(_fileno(stdout), _O_U16TEXT);
 	_setmode(_fileno(stderr), _O_U16TEXT);
 	SetConsoleCtrlHandler(OnSignal, TRUE);
-
+	int exitCode = EXIT_SUCCESS;
 	try
 	{
 		LoggerService::Initialize<Log::FileLogger>(L"activity.log");
@@ -45,6 +45,8 @@ int wmain(int argc, wchar_t *argv[])
 	{
 		std::wcerr << e.What() << std::endl;
 		LoggerService::Instance()->Log(e.What());
+
+		exitCode = EXIT_FAILURE;
 	}
 	catch (const std::exception& e)
 	{
@@ -54,9 +56,11 @@ int wmain(int argc, wchar_t *argv[])
 
 		std::wcerr << wmsg << std::endl;
 		LoggerService::Instance()->Log(wmsg);
+
+		exitCode = EXIT_FAILURE;
 	}
 
 	LoggerService::Instance()->Log(L"Exited");
 
-	return 0;
+	return exitCode;
 }
