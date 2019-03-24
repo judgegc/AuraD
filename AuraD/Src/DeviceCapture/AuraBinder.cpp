@@ -3,6 +3,7 @@
 #include "AuraSDK/Device.h"
 #include "AuraSDK/GpuDevice.h"
 #include <AuraSDK/MbDevice.h>
+#include <AuraSDK/KbDevice.h>
 #include <memory>
 #include <algorithm>
 namespace DeviceCapture
@@ -28,8 +29,14 @@ std::vector<std::unique_ptr<AuraSDK::LED>> AuraBinder::Bind(const CaptureUnit & 
 		break;
 	}
 	case CaptureUnit::DeviceType::KEYBARD:
+	{
+		auto kb = enumerator.GetAll<AuraSDK::KbDevice>();
+		dev.resize(kb.size());
+		std::move(kb.begin(), kb.end(), dev.begin());
+		break;
+	}
 	case CaptureUnit::DeviceType::MOUSE:
-		throw Core::Exception(L"Keyboard and mouse interface not implemented yet");
+		throw Core::Exception(L"Mouse interface not implemented yet");
 	}
 
 	std::vector<std::unique_ptr<AuraSDK::LED>> ret;

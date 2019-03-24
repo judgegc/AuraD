@@ -29,6 +29,11 @@ void API::Initialize(const std::wstring& libPath)
 	SetMbColorPtr = GetAPIEntry<SetMbColorFunc>(hLib, "SetMbColor");
 	GetMbColorPtr = GetAPIEntry<GetMbColorFunc>(hLib, "GetMbColor");
 	GetMbLedCountPtr = GetAPIEntry<GetMbLedCountFunc>(hLib, "GetMbLedCount");
+
+	EnumerateKbControllerPtr = GetAPIEntry<CreateClaymoreKeyboardFunc>(hLib, "CreateClaymoreKeyboard");
+	SetKbModePtr = GetAPIEntry<SetClaymoreKeyboardModeFunc>(hLib, "SetClaymoreKeyboardMode");
+	SetKbColorPtr = GetAPIEntry<SetClaymoreKeyboardColorFunc>(hLib, "SetClaymoreKeyboardColor");
+	GetKbLedCountPtr = GetAPIEntry<GetClaymoreKeyboardLedCountFunc>(hLib, "GetClaymoreKeyboardLedCount");
 }
 void API::Terminate()
 {
@@ -79,5 +84,23 @@ DWORD API::GetMbColor(MbLightControl handle, std::vector<BYTE>& color) const
 DWORD API::GetMbLedCount(MbLightControl handle) const
 {
 	return GetMbLedCountPtr(handle);
+}
+DWORD API::EnumerateKbController(ClaymoreKeyboardLightControl handles[], DWORD) const
+{
+	return EnumerateKbControllerPtr(handles);
+}
+DWORD API::SetKbMode(ClaymoreKeyboardLightControl handle, DeviceMode mode) const
+{
+	return SetKbMode(handle, mode);
+}
+DWORD API::SetKbColor(ClaymoreKeyboardLightControl handle, const std::vector<BYTE>& color) const
+{
+	return SetKbColorPtr(handle,
+		const_cast<BYTE*>(color.data()),
+		color.size() * sizeof(std::remove_reference<decltype(color)>::type::value_type));
+}
+DWORD API::GetKbLedCount(ClaymoreKeyboardLightControl handle) const
+{
+	return GetKbLedCount(handle);
 }
 }
