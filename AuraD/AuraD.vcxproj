@@ -131,6 +131,7 @@
     <ClCompile Include="Src\AuraSDK\DeviceEnumerator.cpp" />
     <ClCompile Include="Src\AuraSDK\Device.cpp" />
     <ClCompile Include="Src\AuraSDK\GpuDevice.cpp" />
+    <ClCompile Include="Src\AuraSDK\KbDevice.cpp" />
     <ClCompile Include="Src\ColorSchemaReader.cpp" />
     <ClCompile Include="Src\ColorSchema\Factory.cpp" />
     <ClCompile Include="Src\ColorSchema\Gradient.cpp" />
@@ -170,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.h" />
+    <ClInclude Include="Src\AuraSDK\KbDevice.h" />
     <ClInclude Include="Src\Log\FileLogger.h" />
     <ClInclude Include="Src\Log\Logger.h" />
     <ClInclude Include="Src\Core\Util.h" />
