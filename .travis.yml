@@ -18,3 +18,5 @@ deploy:
   file:
     - AuraD.zip
   skip_cleanup: true
+  on:
+    branch: master

@@ -1,4 +1,5 @@
 #include "AuraBinder.h"
+#include "Core/Exception.h"
 #include "AuraSDK/Device.h"
 #include "AuraSDK/GpuDevice.h"
 #include <AuraSDK/MbDevice.h>
@@ -28,7 +29,7 @@ std::vector<std::unique_ptr<AuraSDK::LED>> AuraBinder::Bind(const CaptureUnit & 
 	}
 	case CaptureUnit::DeviceType::KEYBARD:
 	case CaptureUnit::DeviceType::MOUSE:
-		throw std::runtime_error("Keyboard and mouse interface not implemented yet.");
+		throw Core::Exception(L"Keyboard and mouse interface not implemented yet");
 	}
 
 	std::vector<std::unique_ptr<AuraSDK::LED>> ret;

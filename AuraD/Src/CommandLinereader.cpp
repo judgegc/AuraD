@@ -26,7 +26,7 @@ std::unordered_map<std::wstring, std::vector<std::wstring>> CommandLineReader::o
 		}
 		else
 		{
-			throw Core::Exception(L"Option key not found.");
+			throw Core::Exception(L"Option key not found");
 		}
 	}
 	return opts;

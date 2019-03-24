@@ -139,9 +139,12 @@
     <ClCompile Include="Src\AuraSDK\MbDevice.cpp" />
     <ClCompile Include="Src\CommandLinereader.cpp" />
     <ClCompile Include="Src\Core\AutoIncrement.cpp" />
+    <ClCompile Include="Src\Log\FileLogger.cpp" />
     <ClCompile Include="Src\Core\GetLastErrorAsString.cpp" />
     <ClCompile Include="Src\ColorSchema\Rgb.cpp" />
     <ClCompile Include="Src\ColorSchema\RgbAdapter.cpp" />
+    <ClCompile Include="Src\Log\Logger.cpp" />
+    <ClCompile Include="Src\Core\Util.cpp" />
     <ClCompile Include="Src\DataSourceReader.cpp" />
     <ClCompile Include="Src\DataSource\NonQuotedString.cpp" />
     <ClCompile Include="Src\DataSource\QuotedString.cpp" />
@@ -156,6 +159,7 @@
     <ClCompile Include="Src\Provider\PDH\PdhQuery.cpp" />
     <ClCompile Include="Src\Provider\ProviderFactory.cpp" />
     <ClCompile Include="Src\RangeReader.cpp" />
+    <ClCompile Include="Src\Services\LoggerService.cpp" />
     <ClCompile Include="Src\Syntax\Any.cpp" />
     <ClCompile Include="Src\Syntax\Cursor.cpp" />
     <ClCompile Include="Src\Syntax\Identifier.cpp" />
@@ -166,10 +170,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.h" />
+    <ClInclude Include="Src\Log\FileLogger.h" />
+    <ClInclude Include="Src\Log\Logger.h" />
+    <ClInclude Include="Src\Core\Util.h" />
     <ClInclude Include="Src\DynamicBacklight.h" />
     <ClInclude Include="Src\ParsingError.h" />
     <ClInclude Include="Src\PdhDialog.h" />
     <ClInclude Include="Src\RangeReader.h" />
+    <ClInclude Include="Src\Services\LoggerService.h" />
     <ClInclude Include="Src\Subprogram.h" />
     <ClInclude Include="Src\AuraSDK\API.h" />
     <ClInclude Include="Src\AuraSDK\Color.h" />

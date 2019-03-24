@@ -26,7 +26,7 @@ void ColorSchemaReader::ModelTrigger()
 void ColorSchemaReader::ComponentTrigger()
 {
 	if (currentComponent >= modelComponents)
-		throw Core::Exception(L"Too many components.");
+		throw Core::Exception(L"Too many components");
 
 	result.model->SetComponent(currentComponent, component.Get<Syntax::Number>()->Value());
 	++currentComponent;
@@ -48,7 +48,7 @@ bool ColorSchemaReader::ProcessNode(Syntax::TokenNode * node)
 double ColorSchemaReader::NextAutoPosVal()
 {
 	if (autoPosVal == autoPos.end())
-		throw Core::Exception(L"Missing model stop pos.");
+		throw Core::Exception(L"Missing model stop pos");
 	return *autoPosVal++;
 }
 

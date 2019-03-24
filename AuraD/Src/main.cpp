@@ -2,6 +2,9 @@
 #include "CommandLineReader.h"
 #include "Application.h"
 
+#include "Services/LoggerService.h"
+#include "Log/FileLogger.h"
+
 #include <io.h>
 #include <atomic>
 #include <fcntl.h>
@@ -9,6 +12,7 @@
 #include <Windows.h>
 
 using namespace Core;
+using namespace Services;
 
 std::atomic<bool> IsWorking = true;
 BOOL WINAPI OnSignal(DWORD signal)
@@ -27,9 +31,12 @@ int wmain(int argc, wchar_t *argv[])
 	_setmode(_fileno(stdout), _O_U16TEXT);
 	_setmode(_fileno(stderr), _O_U16TEXT);
 	SetConsoleCtrlHandler(OnSignal, TRUE);
-
+	int exitCode = EXIT_SUCCESS;
 	try
 	{
+		LoggerService::Initialize<Log::FileLogger>(L"activity.log");
+		LoggerService::Instance()->Log(L"Logger initialized");
+
 		CommandLineReader cmd;
 		Application app(cmd(argc, argv));
 		app.Run();
@@ -37,10 +44,23 @@ int wmain(int argc, wchar_t *argv[])
 	catch (const Exception& e)
 	{
 		std::wcerr << e.What() << std::endl;
+		LoggerService::Instance()->Log(e.What());
+
+		exitCode = EXIT_FAILURE;
 	}
 	catch (const std::exception& e)
 	{
-		std::wcerr << e.what() << std::endl;
+		std::string_view msg(e.what());
+		std::wstring wmsg(msg.length(), 0);
+		std::copy(msg.begin(), msg.end(), wmsg.begin());
+
+		std::wcerr << wmsg << std::endl;
+		LoggerService::Instance()->Log(wmsg);
+
+		exitCode = EXIT_FAILURE;
 	}
-	return 0;
+
+	LoggerService::Instance()->Log(L"Exited");
+
+	return exitCode;
 }
