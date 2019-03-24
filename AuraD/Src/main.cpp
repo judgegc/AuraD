@@ -48,7 +48,12 @@ int wmain(int argc, wchar_t *argv[])
 	}
 	catch (const std::exception& e)
 	{
-		std::wcerr << e.what() << std::endl;
+		std::string_view msg(e.what());
+		std::wstring wmsg(msg.length(), 0);
+		std::copy(msg.begin(), msg.end(), wmsg.begin());
+
+		std::wcerr << wmsg << std::endl;
+		LoggerService::Instance()->Log(wmsg);
 	}
 
 	LoggerService::Instance()->Log(L"Exited");
