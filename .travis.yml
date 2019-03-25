@@ -13,7 +13,8 @@ script:
   - 7z a -tzip AuraD.zip ./CI/AuraD.exe ./AuraSDK/sdk/AURA_SDK.dll
 deploy:
   name: Build $(git describe --abbrev=0)
-  api_key: $(API_KEY)
+  api_key: 
+    secure: bd2cM9KQAubngslmFtdBuYSOo4LEi7sL67I+2WJt69YTJOHHLMRxXYOLdhqWVh8v2c4kp1apwwcZtNEzDQ+DI4shXKlVnSI1/v4XOFdVZTf3ncXQpYpRAn2+FNtoLLnassphds7ITaXbwOzGgtyKEO2oAuoVp5ZX1BX1CFrO6/QyaVTNOANEuky4ovBUgOLgq0IM7XyDFkJhfxDaF3IMeSuhld/b9XlAUHWWIGOBJ3G5RrhU+YxRcSpwo3/vwTwdaoYpucZHRBZ2A1PJxNOho6R+z1xhRMGVvXcJtW/ufRZg7ON1OqlEIwUlJGTLJ7EgJ0VlNbYWIQKM0mjxFGW5qy4DLkS7bUurXReybnitMR3qsxxolrDdwVkWHdbm5llAg/Szw5iqdw71rFKYBox93Yz66XyNNxR+/FSmn1kA1O65ZFAlN+eTGxJR6P0YMq42cZR0Gx2tfLxCvHLvAyUIQz+UtBw0rJtnVgwLSPjx8FhBGhIHJARoFl1UvcxKJELM3HH1m2FOou9YTJ0t+I8bsbhJeOxmXUAvt0N5ECkqaG67+VxEo/bcSUMELL2l7q/wEeaDdQBlKHQZ2O41HoeCuy785IifFFRBopInzjeYIc9XeJ8PywxX9ud9b51UZXtjHa1nj3ylqUl6U5S8oBBzCudp8aWUWETM9UtObaFNIfg=
   provider: releases
   file:
     - AuraD.zip
