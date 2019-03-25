@@ -1,4 +1,4 @@
-![](https://travis-ci.com/judgegc/AuraD.svg?branch=master)
+![](https://travis-ci.org/judgegc/AuraD.svg?branch=master)
 
 ```
 ./AuraD.exe -e [capture] [color schema] [data provider]
