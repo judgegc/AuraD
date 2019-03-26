@@ -91,7 +91,7 @@ DWORD API::EnumerateKbController(ClaymoreKeyboardLightControl handles[], DWORD) 
 }
 DWORD API::SetKbMode(ClaymoreKeyboardLightControl handle, DeviceMode mode) const
 {
-	return SetKbMode(handle, mode);
+	return SetKbModePtr(handle, static_cast<int>(mode));
 }
 DWORD API::SetKbColor(ClaymoreKeyboardLightControl handle, const std::vector<BYTE>& color) const
 {
@@ -101,6 +101,6 @@ DWORD API::SetKbColor(ClaymoreKeyboardLightControl handle, const std::vector<BYT
 }
 DWORD API::GetKbLedCount(ClaymoreKeyboardLightControl handle) const
 {
-	return GetKbLedCount(handle);
+	return GetKbLedCountPtr(handle);
 }
 }
