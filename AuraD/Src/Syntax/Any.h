@@ -4,7 +4,7 @@ namespace Syntax {
 class Any : public Token
 {
 public:
-	virtual void Process(Cursor& cursor) override;
+	virtual void Process(Cursor&) override;
 	virtual bool Success() override;
 };
 }

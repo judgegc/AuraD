@@ -1,6 +1,6 @@
 #include "Any.h"
 namespace Syntax
 {
-void Any::Process(Cursor & cursor) {}
+void Any::Process(Cursor&) {}
 bool Any::Success() { return true; }
 }
