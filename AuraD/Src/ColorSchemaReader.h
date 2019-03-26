@@ -31,7 +31,7 @@ class ColorSchemaReader
 	Syntax::TokenNode modelPosVal;
 	Syntax::TokenNode modelSeparator;
 	Syntax::TokenNode end;
-	int currentComponent;
+	uint8_t currentComponent;
 	int modelComponents;
 	const std::array<double, 2> autoPos;
 	decltype(autoPos)::const_iterator autoPosVal;

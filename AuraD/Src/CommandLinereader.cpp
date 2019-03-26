@@ -8,7 +8,7 @@ std::unordered_map<std::wstring, std::vector<std::wstring>> CommandLineReader::o
 	const wchar_t OptPrefix = L'-';
 	bool optReady = false;
 	std::wstring option;
-	for (size_t n = 1; n < argc; ++n)
+	for (int n = 1; n < argc; ++n)
 	{
 		std::wstring str(argv[n]);
 		if (/*!optReady &&*/ str.size() >= 2 && str.front() == OptPrefix)

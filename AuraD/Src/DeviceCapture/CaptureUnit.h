@@ -9,7 +9,7 @@ struct CaptureUnit
 	DeviceType type;
 	Capture deviceCap;
 	Capture ledCap;
-	std::vector<int> deviceIdx;
-	std::vector<int> ledIdx;
+	std::vector<uint32_t> deviceIdx;
+	std::vector<uint32_t> ledIdx;
 };
 }
