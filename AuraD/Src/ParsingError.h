@@ -7,5 +7,5 @@ class ParsingError : public Core::Exception
 public:
 	explicit ParsingError(const std::wstring& title, const std::wstring& sample, size_t problemIdx);
 private:
-	std::wstring Format(const std::wstring& title, const std::wstring& sample, size_t problemIdx) const;
+	static std::wstring Format(const std::wstring& title, const std::wstring& sample, size_t problemIdx);
 };

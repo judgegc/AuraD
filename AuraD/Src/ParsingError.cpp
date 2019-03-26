@@ -6,7 +6,7 @@ ParsingError::ParsingError(const std::wstring& title, const std::wstring& sample
 {
 }
 
-std::wstring ParsingError::Format(const std::wstring& title, const std::wstring& sample, size_t problemIdx) const
+std::wstring ParsingError::Format(const std::wstring& title, const std::wstring& sample, size_t problemIdx)
 {
 	std::wstringstream msg;
 	msg << title << L'\n';
